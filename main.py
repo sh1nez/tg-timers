@@ -146,6 +146,7 @@ async def check_message(client, message: types.Message):
 
         chat_id = message.chat.id
         message_id = message.id
+        await message.pin(both_sides=True)
 
         config_data["message_id"] = message.id
         config_data["chat_id"] = message.chat.id
@@ -159,7 +160,7 @@ async def main():
         time_left = event_date - datetime.now()
         if time_left.total_seconds() <= 0:
             ms = await app.send_message(chat_id=chat_id, text=end_message)
-            await ms.pin()
+            await ms.pin(both_sides=True)
             exit()
         try:
             text = "Осталось: " + \
