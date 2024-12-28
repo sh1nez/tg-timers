@@ -1,0 +1,8 @@
+api_hash = ""
+api_id = -1
+chat_id = -1
+message_id = -1
+extra_message = "до нового года!"
+end_message = "С новым 2025 годом!"
+sleep_time = 5
+end_date = "2025-01-01T00:00:00"
